@@ -14,6 +14,8 @@
 		580B67FC1AC4064200251493 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 580B67FB1AC4064200251493 /* Images.xcassets */; };
 		580B67FF1AC4064200251493 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 580B67FD1AC4064200251493 /* LaunchScreen.xib */; };
 		580B680B1AC4064200251493 /* XML__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B680A1AC4064200251493 /* XML__Tests.m */; };
+		580B68171AC41E2200251493 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B68161AC41E2200251493 /* Video.m */; };
+		580B681B1AC4279600251493 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B681A1AC4279600251493 /* NSArray+Log.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		580B68041AC4064200251493 /* XML解析Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XML解析Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		580B68091AC4064200251493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		580B680A1AC4064200251493 /* XML__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XML__Tests.m; sourceTree = "<group>"; };
+		580B68151AC41E2200251493 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		580B68161AC41E2200251493 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		580B68191AC4279600251493 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		580B681A1AC4279600251493 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,8 @@
 		580B67ED1AC4064200251493 /* XML解析 */ = {
 			isa = PBXGroup;
 			children = (
+				580B68181AC4279600251493 /* Log */,
+				580B68141AC41E2200251493 /* Model */,
 				580B67F21AC4064200251493 /* AppDelegate.h */,
 				580B67F31AC4064200251493 /* AppDelegate.m */,
 				580B67F51AC4064200251493 /* ViewController.h */,
@@ -117,6 +125,24 @@
 				580B68091AC4064200251493 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		580B68141AC41E2200251493 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				580B68151AC41E2200251493 /* Video.h */,
+				580B68161AC41E2200251493 /* Video.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		580B68181AC4279600251493 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				580B68191AC4279600251493 /* NSArray+Log.h */,
+				580B681A1AC4279600251493 /* NSArray+Log.m */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +245,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				580B681B1AC4279600251493 /* NSArray+Log.m in Sources */,
 				580B67F71AC4064200251493 /* ViewController.m in Sources */,
+				580B68171AC41E2200251493 /* Video.m in Sources */,
 				580B67F41AC4064200251493 /* AppDelegate.m in Sources */,
 				580B67F11AC4064200251493 /* main.m in Sources */,
 			);
