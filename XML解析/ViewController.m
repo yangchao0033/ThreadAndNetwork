@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Video.h"
+#import "YCTableViewCell.h"
 
 @interface ViewController () <NSXMLParserDelegate>
 /*
@@ -18,18 +19,45 @@
  */
 @property (nonatomic, strong) NSMutableArray *videos;
 @property (nonatomic, strong) Video *currentVideo;
-@property (nonatomic, strong)NSMutableString *elementString;
+@property (nonatomic, strong) NSMutableString *elementString;
+@property (nonatomic, strong) NSArray *dataList;
+//@property (weak, nonatomic) IBOutlet UIRefreshControl *refreshC;
+//
 
 @end
 
 @implementation ViewController
+// MARK:数据源
+- (void)setDataList:(NSArray *)dataList
+{
+    _dataList = dataList;
+    
+    [self.tableView reloadData];
+    
+    [self.refreshControl endRefreshing];
+    
+//    [self.refreshC endRefreshing];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.dataList.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YCTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    cell.video = self.dataList[indexPath.row];
+    return cell;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self loadData];
 }
 
-- (void)loadData{
+
+- (IBAction)loadData{
     NSURL *url = [NSURL URLWithString:@"http://127.0.0.1/videos.xml"];
     // 请求 不缓存
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:1 timeoutInterval:15.0];
@@ -90,6 +118,12 @@
 - (void)parserDidEndDocument:(NSXMLParser *)parser
 {
     NSLog(@"结束文档 %@", self.videos);
+    // 在主线程更新UI（设置模型）
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.dataList = self.videos;
+        
+    });
+    
 }
 //MARK:懒加载
 - (NSMutableArray *)videos

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  YCTableViewCell.h
 //  XML解析
 //
 //  Created by yc on 15-3-26.
@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UITableViewController
-
-
+@class Video;
+@interface YCTableViewCell : UITableViewCell
+@property (nonatomic, strong)  Video *video;
 @end
-

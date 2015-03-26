@@ -16,6 +16,7 @@
 		580B680B1AC4064200251493 /* XML__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B680A1AC4064200251493 /* XML__Tests.m */; };
 		580B68171AC41E2200251493 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B68161AC41E2200251493 /* Video.m */; };
 		580B681B1AC4279600251493 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B681A1AC4279600251493 /* NSArray+Log.m */; };
+		58AAAC6C1AC44F21000C35B2 /* YCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAAC6B1AC44F21000C35B2 /* YCTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		580B68161AC41E2200251493 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
 		580B68191AC4279600251493 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		580B681A1AC4279600251493 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		58AAAC6A1AC44F21000C35B2 /* YCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCTableViewCell.h; sourceTree = "<group>"; };
+		58AAAC6B1AC44F21000C35B2 /* YCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 			children = (
 				580B68151AC41E2200251493 /* Video.h */,
 				580B68161AC41E2200251493 /* Video.m */,
+				58AAAC6A1AC44F21000C35B2 /* YCTableViewCell.h */,
+				58AAAC6B1AC44F21000C35B2 /* YCTableViewCell.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 				580B681B1AC4279600251493 /* NSArray+Log.m in Sources */,
 				580B67F71AC4064200251493 /* ViewController.m in Sources */,
 				580B68171AC41E2200251493 /* Video.m in Sources */,
+				58AAAC6C1AC44F21000C35B2 /* YCTableViewCell.m in Sources */,
 				580B67F41AC4064200251493 /* AppDelegate.m in Sources */,
 				580B67F11AC4064200251493 /* main.m in Sources */,
 			);
@@ -440,6 +446,7 @@
 				580B68101AC4064200251493 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		580B68111AC4064200251493 /* Build configuration list for PBXNativeTarget "XML解析Tests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +455,7 @@
 				580B68131AC4064200251493 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
