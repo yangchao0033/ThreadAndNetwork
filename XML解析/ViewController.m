@@ -81,18 +81,8 @@
     // 添加对象到数组
     if ([elementName isEqualToString:@"video"]) {
         [self.videos addObject:self.currentVideo];
-    } else if ([elementName isEqualToString:@"name"]) {
-        self.currentVideo.name = self.elementString;
-    } else if ([elementName isEqualToString:@"length"]) {
-        self.currentVideo.length = @(self.elementString.intValue);
-    } else if ([elementName isEqualToString:@"videoURL"]) {
-        self.currentVideo.videoURL = self.elementString;
-    } else if ([elementName isEqualToString:@"imageURL"]) {
-        self.currentVideo.imageURL = self.elementString;
-    } else if ([elementName isEqualToString:@"desc"]) {
-        self.currentVideo.desc = self.elementString;
-    } else if ([elementName isEqualToString:@"teacher"]) {
-        self.currentVideo.teacher = self.elementString;
+    } else if (![elementName isEqualToString:@"videos"]){
+        [self.currentVideo setValue:self.elementString forKeyPath:elementName];
     }
 }
 
